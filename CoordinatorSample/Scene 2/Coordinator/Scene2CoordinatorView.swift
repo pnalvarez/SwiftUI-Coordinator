@@ -22,6 +22,6 @@ struct Scene2CoordinatorView<ViewModel: Scene2CoordinatorViewModelProtocol>: Vie
 
 struct Scene2CoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        Scene2Factory.build()
+        Scene2Factory.build(text: "Hello world")
     }
 }

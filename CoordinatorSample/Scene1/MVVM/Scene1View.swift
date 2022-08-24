@@ -13,9 +13,12 @@ struct Scene1View<ViewModel: Scene1ViewModelProtocol>: View {
     var body: some View {
         ZStack {
             Color.blue.ignoresSafeArea()
-            Button(action: viewModel.goToScene2) {
-                Text("Next scene")
-                    .foregroundColor(Color.yellow)
+            VStack(alignment: .center) {
+                TextField("Type your message", text: $viewModel.text)
+                Button(action: viewModel.goToScene2) {
+                    Text("Go next")
+                        .foregroundColor(.yellow)
+                }
             }
         }
     }

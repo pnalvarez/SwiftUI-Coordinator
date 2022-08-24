@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum Scene2Factory {
-    static func build() -> Scene2CoordinatorView<Scene2CoordinatorViewModel> {
+    static func build(text: String) -> Scene2CoordinatorView<Scene2CoordinatorViewModel> {
         let coordinator = Scene2CoordinatorViewModel()
-        let viewModel = Scene2ViewModel(coordinator: coordinator)
+        let viewModel = Scene2ViewModel(coordinator: coordinator, text: text)
         return Scene2CoordinatorView(viewModel: coordinator,
                                      content: Scene2View(viewModel: viewModel))
     }

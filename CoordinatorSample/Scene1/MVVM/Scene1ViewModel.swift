@@ -8,17 +8,20 @@
 import SwiftUI
     
 protocol Scene1ViewModelProtocol: ObservableObject {
+    var text: String { get set }
     func goToScene2()
 }
 
 final class Scene1ViewModel: Scene1ViewModelProtocol {
     private let coordinator: Scene1CoordinatorProtocol
     
+    @Published var text: String = ""
+    
     init(coordinator: Scene1CoordinatorProtocol) {
         self.coordinator = coordinator
     }
     
     func goToScene2() {
-        coordinator.navigateTo(.scene2)
+        coordinator.navigateTo(.scene2(text))
     }
 }
