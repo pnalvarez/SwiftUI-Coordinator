@@ -14,11 +14,26 @@ struct Scene1View<ViewModel: Scene1ViewModelProtocol>: View {
         ZStack {
             Color.blue.ignoresSafeArea()
             VStack(alignment: .center) {
+                Text("Coordinator Sample")
+                    .font(.title)
+                    .padding(.top)
+                Spacer()
                 TextField("Type your message", text: $viewModel.text)
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 12)
+                    .background(Color.white)
+                    .cornerRadius(4)
+                    .padding()
                 Button(action: viewModel.goToScene2) {
-                    Text("Go next")
-                        .foregroundColor(.yellow)
+                    Text("Go to scene 2")
+                        .foregroundColor(.white)
                 }
+                .padding(.bottom)
+                Button(action: viewModel.goToScene3) {
+                    Text("Go to scene 3")
+                        .foregroundColor(.white)
+                }
+                Spacer()
             }
         }
     }

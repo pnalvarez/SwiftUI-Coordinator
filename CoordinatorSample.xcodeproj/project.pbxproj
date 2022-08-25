@@ -20,6 +20,13 @@
 		3F9A652028B68E2E00FF5C86 /* Scene2CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A651F28B68E2E00FF5C86 /* Scene2CoordinatorViewModel.swift */; };
 		3F9A652228B68EAC00FF5C86 /* Scene2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A652128B68EAC00FF5C86 /* Scene2ViewModel.swift */; };
 		3F9A652428B68ED600FF5C86 /* Scene2Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A652328B68ED600FF5C86 /* Scene2Factory.swift */; };
+		3F9A652B28B713EF00FF5C86 /* NavigationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A652A28B713EF00FF5C86 /* NavigationMode.swift */; };
+		3F9A652D28B7141A00FF5C86 /* NavigationItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A652C28B7141A00FF5C86 /* NavigationItemProtocol.swift */; };
+		3F9A653428B71C0900FF5C86 /* Scene3CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A653328B71C0900FF5C86 /* Scene3CoordinatorView.swift */; };
+		3F9A653628B71C1500FF5C86 /* Scene3CoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A653528B71C1500FF5C86 /* Scene3CoordinatorViewModel.swift */; };
+		3F9A653828B71C6500FF5C86 /* Scene3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A653728B71C6500FF5C86 /* Scene3ViewModel.swift */; };
+		3F9A653A28B71CA400FF5C86 /* Scene3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A653928B71CA400FF5C86 /* Scene3View.swift */; };
+		3F9A653C28B71CAE00FF5C86 /* Scene3Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A653B28B71CAE00FF5C86 /* Scene3Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		3F9A651F28B68E2E00FF5C86 /* Scene2CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2CoordinatorViewModel.swift; sourceTree = "<group>"; };
 		3F9A652128B68EAC00FF5C86 /* Scene2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2ViewModel.swift; sourceTree = "<group>"; };
 		3F9A652328B68ED600FF5C86 /* Scene2Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene2Factory.swift; sourceTree = "<group>"; };
+		3F9A652A28B713EF00FF5C86 /* NavigationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMode.swift; sourceTree = "<group>"; };
+		3F9A652C28B7141A00FF5C86 /* NavigationItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationItemProtocol.swift; sourceTree = "<group>"; };
+		3F9A653328B71C0900FF5C86 /* Scene3CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3CoordinatorView.swift; sourceTree = "<group>"; };
+		3F9A653528B71C1500FF5C86 /* Scene3CoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3CoordinatorViewModel.swift; sourceTree = "<group>"; };
+		3F9A653728B71C6500FF5C86 /* Scene3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3ViewModel.swift; sourceTree = "<group>"; };
+		3F9A653928B71CA400FF5C86 /* Scene3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3View.swift; sourceTree = "<group>"; };
+		3F9A653B28B71CAE00FF5C86 /* Scene3Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene3Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,8 @@
 		3F9A650028B689C700FF5C86 /* CoordinatorSample */ = {
 			isa = PBXGroup;
 			children = (
+				3F9A653028B71BF300FF5C86 /* Scene3 */,
+				3F9A652928B713E200FF5C86 /* Util */,
 				3F9A651028B689D600FF5C86 /* Scene 2 */,
 				3F9A650F28B689D000FF5C86 /* Scene1 */,
 				3F9A650128B689C700FF5C86 /* CoordinatorSampleApp.swift */,
@@ -140,6 +156,43 @@
 				3F9A652328B68ED600FF5C86 /* Scene2Factory.swift */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		3F9A652928B713E200FF5C86 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A652A28B713EF00FF5C86 /* NavigationMode.swift */,
+				3F9A652C28B7141A00FF5C86 /* NavigationItemProtocol.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3F9A653028B71BF300FF5C86 /* Scene3 */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A653228B71BFD00FF5C86 /* Coordinator */,
+				3F9A653128B71BF900FF5C86 /* MVVM */,
+			);
+			path = Scene3;
+			sourceTree = "<group>";
+		};
+		3F9A653128B71BF900FF5C86 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A653728B71C6500FF5C86 /* Scene3ViewModel.swift */,
+				3F9A653928B71CA400FF5C86 /* Scene3View.swift */,
+				3F9A653B28B71CAE00FF5C86 /* Scene3Factory.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		3F9A653228B71BFD00FF5C86 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3F9A653328B71C0900FF5C86 /* Scene3CoordinatorView.swift */,
+				3F9A653528B71C1500FF5C86 /* Scene3CoordinatorViewModel.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,13 +267,20 @@
 			files = (
 				3F9A652028B68E2E00FF5C86 /* Scene2CoordinatorViewModel.swift in Sources */,
 				3F9A651E28B68E2100FF5C86 /* Scene2CoordinatorView.swift in Sources */,
+				3F9A653A28B71CA400FF5C86 /* Scene3View.swift in Sources */,
+				3F9A653628B71C1500FF5C86 /* Scene3CoordinatorViewModel.swift in Sources */,
 				3F9A651428B689EF00FF5C86 /* Scene1CoordinatorView.swift in Sources */,
 				3F9A651628B689F800FF5C86 /* Scene1ViewModel.swift in Sources */,
+				3F9A653428B71C0900FF5C86 /* Scene3CoordinatorView.swift in Sources */,
 				3F9A651228B689E400FF5C86 /* Scene1View.swift in Sources */,
 				3F9A651828B68A0300FF5C86 /* Scene1CoordinatorViewModel.swift in Sources */,
 				3F9A651A28B68A0D00FF5C86 /* Scene1Factory.swift in Sources */,
 				3F9A651C28B68E1700FF5C86 /* Scene2View.swift in Sources */,
+				3F9A652D28B7141A00FF5C86 /* NavigationItemProtocol.swift in Sources */,
+				3F9A652B28B713EF00FF5C86 /* NavigationMode.swift in Sources */,
 				3F9A652228B68EAC00FF5C86 /* Scene2ViewModel.swift in Sources */,
+				3F9A653828B71C6500FF5C86 /* Scene3ViewModel.swift in Sources */,
+				3F9A653C28B71CAE00FF5C86 /* Scene3Factory.swift in Sources */,
 				3F9A652428B68ED600FF5C86 /* Scene2Factory.swift in Sources */,
 				3F9A650228B689C700FF5C86 /* CoordinatorSampleApp.swift in Sources */,
 			);

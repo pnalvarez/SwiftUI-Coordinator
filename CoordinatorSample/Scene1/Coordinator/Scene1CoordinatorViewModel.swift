@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-enum Scene1NavigationItem: Hashable, Identifiable {
+enum Scene1NavigationItem: NavigationItemProtocol {
     case scene2(_ text: String)
     
     var id: UUID {
@@ -24,37 +24,63 @@ enum Scene1NavigationItem: Hashable, Identifiable {
     }
 }
 
+enum Scene1SheetItem: NavigationItemProtocol {
+    case scene3
+    
+    var id: UUID {
+        UUID()
+    }
+    
+    @ViewBuilder
+    func nextView() -> some View {
+        switch self {
+        case .scene3:
+            Scene3Factory.build()
+        }
+    }
+}
+
 protocol Scene1CoordinatorViewModelProtocol: ObservableObject {
-    var navigationItem: Scene1NavigationItem? { get set }
-    var navigationItemCases: [Scene1NavigationItem] { get }
-    var scene2Text: String? { get }
+    var navigationLinkItem: Scene1NavigationItem? { get set }
+    var navigationSheetItem: Scene1SheetItem? { get set }
+    var navigationItemLinkCases: [Scene1NavigationItem] { get }
+    func onAppear()
 }
 
 protocol Scene1CoordinatorProtocol {
     func navigateTo(_ item: Scene1NavigationItem)
+    func present(_ item: Scene1SheetItem)
 }
 
 final class Scene1CoordinatorViewModel: Scene1CoordinatorViewModelProtocol {
-    @Published var navigationItem: Scene1NavigationItem?
-    var scene2Text: String?
+    @Published var navigationLinkItem: Scene1NavigationItem?
+    @Published var navigationSheetItem: Scene1SheetItem?
     
-    var navigationItemCases: [Scene1NavigationItem] = []
+    var navigationItemLinkCases: [Scene1NavigationItem] = []
     
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-        $navigationItem
+        $navigationLinkItem
             .filter({ $0 != nil })
             .sink(receiveValue: {
                 guard let item = $0 else { return }
-                self.navigationItemCases.append(item)
+                self.navigationItemLinkCases.append(item)
             })
             .store(in: &cancellables)
+    }
+    
+    func onAppear() {
+        navigationItemLinkCases = []
     }
 }
 
 extension Scene1CoordinatorViewModel: Scene1CoordinatorProtocol {
     func navigateTo(_ item: Scene1NavigationItem) {
-        self.navigationItem = item
+        navigationLinkItem = item
+    }
+    
+    func present(_ item: Scene1SheetItem) {
+        navigationSheetItem = item
     }
 }

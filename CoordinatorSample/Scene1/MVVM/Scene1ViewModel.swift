@@ -10,6 +10,7 @@ import SwiftUI
 protocol Scene1ViewModelProtocol: ObservableObject {
     var text: String { get set }
     func goToScene2()
+    func goToScene3()
 }
 
 final class Scene1ViewModel: Scene1ViewModelProtocol {
@@ -23,5 +24,9 @@ final class Scene1ViewModel: Scene1ViewModelProtocol {
     
     func goToScene2() {
         coordinator.navigateTo(.scene2(text))
+    }
+    
+    func goToScene3() {
+        coordinator.present(.scene3)
     }
 }

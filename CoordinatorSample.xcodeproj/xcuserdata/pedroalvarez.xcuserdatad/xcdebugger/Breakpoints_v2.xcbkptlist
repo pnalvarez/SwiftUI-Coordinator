@@ -14,8 +14,8 @@
             filePath = "CoordinatorSample/Scene1/MVVM/Scene1ViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "goToScene2()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8BB9379E-92CB-48D3-8F32-0B7ACBB22FD4"
+            uuid = "703BFD33-F9CF-4954-9706-600F0EEB9717"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoordinatorSample/Scene1/Coordinator/Scene1CoordinatorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B75B4314-53B1-41B8-8A51-C957938C7925"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoordinatorSample/Scene1/Coordinator/Scene1CoordinatorViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "navigateTo(_:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "present(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

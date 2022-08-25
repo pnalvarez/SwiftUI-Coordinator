@@ -14,12 +14,16 @@ struct Scene1CoordinatorView<ViewModel: Scene1CoordinatorViewModelProtocol>: Vie
     var body: some View {
         NavigationView {
             ZStack {
-                ForEach(viewModel.navigationItemCases) { item in
-                    NavigationLink(tag: item, selection: $viewModel.navigationItem, destination: item.nextView) { EmptyView() }
+                ForEach(viewModel.navigationItemLinkCases) { item in
+                    NavigationLink(tag: item, selection: $viewModel.navigationLinkItem, destination: item.nextView) { EmptyView() }
                 }
                 content
+                    .onAppear(perform: viewModel.onAppear)
                     .navigationTitle("Scene 1")
                     .navigationBarTitleDisplayMode(.inline)
+                    .sheet(item: $viewModel.navigationSheetItem) { item in
+                        item.nextView()
+                    }
             }
         }
     }
